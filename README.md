@@ -20,6 +20,8 @@ At a larger scale, the model takes what you've written so far, predicts the next
 
 *Source URL: https://www.nature.com/articles/s41586-023-06647-8*
 
+---
+
 ### Hallucination
 
 Because an LLM predicts the *next likely word*, it is optimized to sound fluent and helpful — not to guarantee that every statement is true. When the model fills a gap with something plausible but wrong, that is called a **hallucination**.
@@ -34,6 +36,8 @@ This is not a random bug. The model has no built-in way to "look things up" or "
 - For facts that must be right, verify against a trusted source (or let the assistant use tools — covered next).
 
 **In plain terms:** hallucination is when the AI sounds sure but is wrong. Expect it, check what matters, and use tools or your own judgment when the stakes are high.
+
+---
 
 ### Tool Calling
 
