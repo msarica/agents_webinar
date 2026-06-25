@@ -2,5 +2,9 @@ lesson_plans
 songs
 images
 videos
+output
+song_lyrics
 .env
 .DS*
+node_modules
+.youtube-token.json

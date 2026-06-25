@@ -67,7 +67,7 @@ Default quality settings: `thinking=true`, `inference_steps=8` (turbo), `batch_s
 
 - **No lyrics yet** → run [generate-song-lyrics](../generate-song-lyrics/SKILL.md), save to `song_lyrics/YYYY-MM-DD_<slug>.md`, then pass `--lyrics-file`.
 - **Caption only** → use `--sample-query` or pass `--prompt` with empty lyrics.
-- **Metadata** (optional): `--duration`, `--bpm`, `--key-scale`, `--time-signature`, `--vocal-language`. Omit to let the LM auto-fill when `thinking=true`.
+- **Metadata** (optional): `--bpm`, `--key-scale`, `--time-signature`, `--vocal-language`. **Do not pass `--duration` unless the user requests a specific length** — omitting it lets the LM fit duration to the lyrics when `thinking=true`. A hardcoded duration (e.g. 180s) often cuts songs short.
 
 ### Step 4: Generate
 
@@ -77,7 +77,6 @@ Prefer the script over hand-written curl. It handles auth, polling, parsing resu
 .cursor/skills/create-song/scripts/create-song.sh \
   --prompt "female vocal, piano ballad, emotional" \
   --lyrics "[Verse 1]\nFirst line\nSecond line" \
-  --duration 180 \
   --vocal-language en \
   --thinking \
   -o songs/2026-06-24_ballad.mp3
@@ -109,7 +108,7 @@ Input (pick one primary mode):
   --reference-audio PATH  Reference audio for style transfer
 
 Metadata:
-  --duration SECONDS      Target length (10–600)
+  --duration SECONDS      Target length (10–600); omit unless user requests a specific length
   --bpm N                 Tempo (30–300)
   --key-scale TEXT        e.g. "C Major", "Am"
   --time-signature N      2, 3, 4, or 6
@@ -188,7 +187,6 @@ Use only when the script cannot cover the case (e.g. custom training). Full para
 .cursor/skills/create-song/scripts/create-song.sh \
   --lyrics-file song_lyrics/2026-06-24_esekten-barisa-mektup.md \
   --vocal-language tr \
-  --duration 180 \
   --thinking \
   -o songs/2026-06-24_esekten-barisa-mektup.mp3
 ```

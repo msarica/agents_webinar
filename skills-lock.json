@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "youtube-uploader": {
+      "source": "aviz85/claude-skills-library",
+      "sourceType": "github",
+      "skillPath": "skills/youtube-uploader/SKILL.md",
+      "computedHash": "2e443de8ff0fd3966e22d5eadeacd47fa10c405a50c37e8349dc301a08df16c6"
+    }
+  }
+}
