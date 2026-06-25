@@ -13,6 +13,7 @@ description: >-
 
 1. **Gather inputs** — Collect any details the user provided. Ask only for missing essentials:
    - Subject, grade level, topic/unit, duration
+   - Teacher (defaults to **Mehmet Sarica** if not specified)
    - Standards or competencies (if known)
    - Prior knowledge assumptions
    - Special constraints (ELL, IEP accommodations, class size, tech access)
@@ -24,7 +25,7 @@ description: >-
 
 3. **Write the plan** — Follow the template exactly. Read `lesson_plan_template.md` in the project root, or [template.md](template.md) in this skill folder. Preserve all section headings, subheadings, horizontal rules (`---`), and structure. Replace every placeholder with real content.
 
-4. **Save output** — Write to `lesson_plan_<topic-slug>.md` in the project root unless the user specifies another path. If updating an existing plan, edit that file in place.
+4. **Save output** — Write to `lesson_plans/YYYY-MM-DD_<topic-slug>.md` (date = lesson date or today). When invoked via `/create-lesson-plan`, convert to `lesson_plans/YYYY-MM-DD_<topic-slug>.docx` and delete the `.md` file after successful conversion. If updating an existing plan, edit that file in place.
 
 ## Content Quality Rules
 
